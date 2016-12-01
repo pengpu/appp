@@ -1,0 +1,76 @@
+body {
+    background-color: #ffffff;
+}
+
+
+.top-container {
+    padding: 0px;
+    background-color: #fcfcfc;
+    padding: 4px 0px;
+    padding-bottom: 0px;
+}
+
+    .top-container .icon {
+        float: left;
+        width: 32px;
+        height: 32px;
+        margin-left: 20px;
+        background-color: #f73f00;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('../images/icon_person_info.png');
+        border-radius: 5px;
+    }
+
+    .top-container .header-font {
+        position: absolute;
+        line-height: 32px;
+        color: #555553;
+        font-size: 14px;
+        font-weight: 800;
+        left: 62px;
+    }
+
+.order-title {
+    text-align: center;
+    line-height: 40px;
+    background-color: #d3d3d3;
+    color: #5c5c5a;
+    font-weight: 800;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.person-info {
+    padding: 20px;   
+    text-align:center;
+    line-height:40px;
+    color:#5c5c5a;
+    font-size:14px;
+    font-weight:800;
+}
+.person-info div span:first-child{
+    width:60px;
+}
+ input[type=text]{
+     border:1px solid #cccccc;
+     border-radius:1px;
+     height:24px;
+     width:200px;
+     -webkit-appearance: none;
+ }
+
+ .person-info a,.person-info a:hover{
+     background-color:#f73f00; 
+     border-radius:3px;
+     color:#ffffff;
+     font-size:16px;
+     width:200px;
+     display:block; 
+     margin:0px auto;
+     margin-top:20px;
+ }
+.clear {
+    clear: both;
+} 
+ 

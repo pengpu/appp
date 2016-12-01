@@ -1,0 +1,38 @@
+/*奇酷社区*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#header{
+	width: 100%;
+	height: auto;
+}
+#header .header_top{
+	width: 100%;
+	height: 30px;
+	float: left;
+	background-color: #5C5C5C;
+}
+#header .header_top p{
+	margin-left: 50px;
+	line-height: 30px;
+	color: white;
+	font-size: 12px;
+}
+#header .header_top p span{
+	font-family: "微软雅黑";
+	margin:0px 8px;
+}
+
+#header .header_nav{
+	width: 1200px;
+	line-height: 100px;
+	margin: 0px auto;
+	border: 1px solid firebrick;
+	float: left;
+}
+#header .header_nav .header_logo {
+	/*width: 160px;
+	height: 40px;*/
+}

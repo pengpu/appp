@@ -1,0 +1,193 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="MobileOptimized" content="320" />
+    <link href="../css/skin.css" rel="stylesheet" />
+    <link href="../css/shoplist.css" rel="stylesheet" />
+</head>
+<body>
+    <input type="hidden" id="siteContextPath" value="" />
+    <div id="loading" style="top: 150px;display:none;z-index:999999;">
+        <div class="lbk"></div> <div class="lcont">
+            <img src="../images/loading.gif" alt="loading..." />正在加载...
+        </div>
+    </div>
+     <div id="attentionMsg" class="cart-attention transparent5"> <p class="cart-attentiontext"></p> </div>
+    <header class="header">
+        <a class="back"><span class="back_icon"></span></a>
+        <h1 class="title">商户列表</h1> <a class="search_ico">搜索</a>
+    </header>
+    <div>
+        <section class="main">
+            <ul class="filter">
+                <li>
+                    <div class="filter_tab food">不限分类</div>
+                    <ul class="sub">
+                        <li class="on" id="category_all"><a href="#" class="sub_first">全部分类</a></li>
+                        <li data-type="parent" data-id="17669"> <div class="sub_first">鲜果配送</div></li>
+                    </ul>
+                    <ul class="ul_sub" data-id="17669">
+                        <li id="category_17669_sub_all"><a onclick="showLoading()" href="#">全部</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="filter_tab shop">不限分区</div>
+                    <ul class="sub">
+                        <li class="on" id="area_all">
+                            <a href="#" class="sub_first">全部分区</a>
+                        </li>
+                        <li data-type="parent" data-id="9697">
+                            <div class="sub_first">武昌区</div>
+                        </li>
+                        <li data-type="parent" data-id="9698"> <div class="sub_first">汉口区</div> </li>
+                        <li data-type="parent" data-id="9699"> <div class="sub_first">汉阳区</div> </li>
+                        <li data-type="parent" data-id="10780"> <div class="sub_first">青山区</div> </li>
+                        <li data-type="parent" data-id="9816"> <div class="sub_first">宜昌</div> </li>
+                    </ul>
+                    <ul class="ul_sub" data-id="9697">
+                        <li><a onclick="showLoading()" href="#">全部</a></li>
+                    </ul> <ul class="ul_sub" data-id="9698">
+                        <li><a onclick="showLoading()" href="#">全部</a></li>
+                    </ul>
+                    <ul class="ul_sub" data-id="9699">
+                        <li><a onclick="showLoading()" href="#">全部</a></li>
+                    </ul> <ul class="ul_sub" data-id="10780">
+                        <li><a onclick="showLoading()" href="#">全部</a></li>
+                    </ul> <ul class="ul_sub" data-id="9816"> <li><a onclick="showLoading()" href="#">全部</a></li> </ul>
+                </li>
+                <li>
+                    <div class="filter_tab sort">默认排序</div>
+                    <ul class="ul_sub">
+                        <li class="on" id="order_by_default">
+                            <a onclick="showLoading()" href="#">
+                                默认排序
+                            </a>
+                        </li>
+                        <li data-type="distance">
+                            <a onclick="loadMyLocation();">
+                                离我最近
+                            </a>
+                        </li>
+                        <li data-type="sales">
+                            <a onclick="showLoading()" href="#">销量最好</a>
+                        </li>
+                        <li data-type="price">
+                            <a onclick="showLoading()" href="#">起送价最低</a>
+                        </li>
+                        <li data-type="appraise"><a onclick="showLoading()" href="#">评价最好</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="ul_goods">
+                <li>
+                    <a href="shop_index.html">
+                        <div class="goods_image">
+                            <img src="../images/1421315293879.jpg" />
+                        </div> <h3>麦黍叔蛋黄酥特约店</h3>
+                        <p style="max-height: 32px;overflow:hidden;line-height:30px;"> 50公里内&nbsp;80元起送 </p>
+                        <p style="max-height: 32px;overflow:hidden;padding-right:40px;text-overflow: ellipsis;white-space: nowrap;">
+                            菱角湖万达
+                        </p> <p class="shop_summary"> 武汉同城及全国快递达到起送量包邮 </p> <span class="list_shop_status on"> 营业中<br /><span>(8:00-23:00)</span>  </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="shop_index.html">
+                        <div class="goods_image">
+                            <img src="../images/1421320555423.jpg" />
+                        </div>
+                        <h3>武广江汉路店</h3> <p style="max-height: 32px;overflow:hidden;line-height:30px;"> 5公里内&nbsp;20元起送 </p> <p style="max-height: 32px;overflow:hidden;padding-right:40px;text-overflow: ellipsis;white-space: nowrap;"> 不仅仅是一家水果店 </p> <p class="shop_summary"> 武广世贸新世界商圈，江汉路循礼门商圈，解放大道，宝丰路商圈，汉正街商圈，万松园商圈，崇仁路，航空路，青年路及武胜路，利济北路，万松园路，新华路及友谊路，江汉北路，雪松路及台北一路，台北路，香港路及大智路，澳门路及三阳路，解放公园路，黄浦大街，京汉大道，中山大道，沿江大道周边5公里送货上门 </p> <span class="list_shop_status on"> 营业中 <br /><span>(11:00-20:00)</span></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop_index.html">
+                        <div class="goods_image">
+                            <img src="../images/1421639013329.jpg" />
+                        </div> <h3>街道口店</h3> <p style="max-height: 32px;overflow:hidden;line-height:30px;"> 5公里内&nbsp;30元起送 </p> <p style="max-height: 32px;overflow:hidden;padding-right:40px;text-overflow: ellipsis;white-space: nowrap;"> 武汉大学正大门 </p> <p class="shop_summary"> 街道口商圈、广埠屯商圈，卓刀泉、新世界百货，群光广场、书香门第，武汉大学、华中师范大学等5公里范围及南湖地区 </p> <span class="list_shop_status"> 休息中<br /><span></span></span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="shade"></div>
+    <div class="search_form">
+        <fieldset>
+            <legend>搜索表单</legend>
+            <input type="text" placeholder="请输入商户名称" id="goodsSearch" value="" class="ipt" />
+            <a class="smt">搜索</a>
+        </fieldset>
+    </div>
+    <script>
+        $(function () {
+            $(".search_ico").live("tap", function () {
+                if ($(".shade").is(":visible")) {
+                    $(".shade,.search_form").hide();
+                } else {
+                    $(".shade,.search_form").show();
+                    setTimeout(function () {
+                        $(".search_form").addClass("search_form_show");
+                    }, 10);
+                }
+            });
+            $(".shade").live("tap", function () {
+                $(".shade,.search_form").hide();
+            });
+            $(".smt").live("tap",
+            function () {
+                //$(this).closest("form").removeClass("search_form_show");
+                //setTimeout(function () {
+                //    $(".shade,.search_form").hide(); showLoading();
+                //    setTimeout(function () {
+                //        window.location.href = "" + $("#goodsSearch").val();
+                //    });
+                //}, 200)
+            });
+            $(".filter_tab").click(function () {
+                if ($(this).next().is(":visible") == false) {
+                    if ($(this).is(".sort")) {
+                        $(this).parent().siblings().removeClass("on").find("ul.ul_sub").hide();
+                        $(this).parent().addClass("on").find("ul.ul_sub").show();
+                    } else {
+                        $(this).parent().siblings().removeClass("on").find("ul.sub").hide();
+                        $(this).parent().addClass("on").find("ul.sub").show();
+                    } if ($(this).next().height() > ($(window).height() - 135)) {
+                        $(this).next().height($(window).height() - 135);
+                    }
+                } else {
+                    $(this).parent().removeClass("on").find("ul").hide();
+                }
+            });
+            $(".sub li").click(function () {
+                $(this).siblings().removeClass("on").parents("li").find("ul.ul_sub").hide();
+                var sub_list = $(this).addClass("on").parents("li").find("ul[data-id='" + $(this).attr("data-id") + "']");
+                if (sub_list.find("li").length == 1) {
+                    showLoading();
+                    window.location.href = sub_list.find("li").eq(0).find("a").attr("href");
+                } else {
+                    sub_list.show();
+                    if (sub_list.height() > ($(window).height() - 135)) {
+                        sub_list.height($(window).height() - 135);
+                    }
+                }
+            });
+            //$("#order_by_default").removeClass("on");
+            //var currentSortBy = $("div.filter_tab.sort").next().find("li[data-type='sales']");
+            //currentSortBy.addClass("on");
+            //$("div.filter_tab.sort").text(currentSortBy.find("a").text());
+            hideLoading();
+        });
+        function loadMyLocation() {
+            showLoading();
+            loadLocation(function (geo) {
+                window.location.href = " " + geo.x + "&latitude=" + geo.y;
+            }, function () {
+                hideLoading();
+                alert("获取地理位置失败，请确认是否开启GPS定位！");
+            });
+        } </script>
+</body>
+</html>

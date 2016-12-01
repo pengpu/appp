@@ -1,0 +1,136 @@
+body {
+    background-color: #ffffff;
+}
+
+#page {
+    padding-bottom: 50px;
+}
+
+.group-container {
+    background-color: #fcfcfc;
+    padding: 4px 0px;
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    height: 32px;
+}
+
+    .group-container .icon {
+        float: left;
+        width: 32px;
+        height: 32px;
+        margin-left: 20px;
+        background-color: #f73f00;
+        background-repeat: no-repeat;
+        background-position: center center;
+        line-height: 32px;
+        color: #ffffff;
+        text-align: center;
+        font-size: 13px;
+        border-radius: 5px;
+        font-weight: 800;
+    }
+
+    .group-container .header-font {
+        position: absolute;
+        line-height: 32px;
+        color: #555553;
+        font-size: 14px;
+        font-weight: 800;
+        left: 62px;
+    }
+
+.card-container {
+    text-align: center;
+    width: 280px;
+    margin: 0px auto;
+    position: relative;
+    height: 120px;
+}
+
+    .card-container p {
+        line-height: 30px;
+    }
+
+    .card-container .card {
+        background-image: url('../images/icon_VIP_card.png');
+        width: 140px;
+        height: 80px;
+    }
+
+    .card-container a {
+        background-color: #f73f00;
+        border-radius: 3px;
+        color: #ffffff;
+        font-size: 16px;
+        display: block;
+        padding: 5px 0px;
+        width: 120px;
+    }
+
+        .card-container a:nth-child(3) {
+            position: absolute;
+            left: 160px;
+            top: 38px;
+        }
+
+        .card-container a:last-child {
+            position: absolute;
+            left: 160px;
+            bottom:18px;
+        }
+
+.clear {
+    clear: both;
+}
+
+.way-list {
+    margin: 10px 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    background-color: #fcfcfc;
+}
+
+    .way-list a {
+        display: block;
+        position: relative;
+        min-height: 28px;
+        padding: 5px;
+        border-bottom: 1px solid #d3d3d3;
+        line-height: 2;
+        color: #555553;
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+        .way-list a div {
+            line-height: 24px;
+        }
+
+        .way-list a:last-child {
+            border-bottom: 0px;
+        }
+
+        .way-list a p {
+            position: absolute;
+            left: 10px;
+        }
+
+            .way-list a p span {
+                margin-left: 5px;
+                font-weight: normal;
+                font-size: 12px;
+            }
+
+        .way-list a i {
+            float: right;
+            float: right;
+            top: 17px;
+            right: 10px;
+            background: #CFCFCF;
+            border-radius: 0;
+        }
+
+            .way-list a i::before {
+                background: #CFCFCF;
+                border-radius: 0;
+            }

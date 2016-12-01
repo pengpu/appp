@@ -1,0 +1,509 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+img{
+	border: none;
+}
+ul,li{ list-style: none;}
+a{	text-decoration: none;}
+
+#header{
+	width: 100%;
+	height: auto;
+	background-color: #485671;
+}
+
+#header .header_top{
+	height: 100px;
+	margin: 0px auto;
+	/*text-align: center;*/
+	line-height: 100px;
+}
+
+#header .header_top .qiku_name {
+	width: 250px;
+	float: left;
+	margin-left: 20px;
+}
+#header .header_top .qiku_name span{
+	font-family: "微软雅黑";
+	font-size: 35px;
+	font-weight: bold;
+	color: white;
+}
+/*导航*/
+#header .header_top .nav {
+	float: right;
+	margin-right: 10px;
+	text-align: center;
+}
+#header .header_top .nav ul li{
+	list-style: none;
+	margin-left: 30px;
+	float: left;
+}
+#header .header_top .nav ul li a{
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: white;
+	text-decoration: none;
+}
+#header .header_top .nav ul li a:hover{
+	color: #DEB41A;
+}
+#header .header_top .nav .input_1{
+	width: 210px;
+	height: 28px;
+	border: 1px white solid;
+	border-radius: 5px;
+	font-size: 12px;
+	background-color: #485671;
+	text-indent: 8px;
+	color: #fff;
+}
+
+#header .header_top .nav .input_2{
+	width: 100px;
+	height: 28px;
+	border: 1px #FCC800 solid;
+	border-radius: 5px;
+	font-size: 14px;
+	background-color: #FCC800;
+	text-indent: 8px;
+	color: black; 
+}
+
+/*导航分类*/
+#header .nav_guide{
+	width: 100%;
+	line-height: 40px;
+	background: #E6E7E9;
+	position: relative;
+	/*clear: both;*/
+	overflow: hidden;	/*清浮动*/
+}
+#header .nav_guide .sort{
+	float: left;
+	margin-left: 40px;
+}
+#header .nav_guide .sort span{
+	font-size: 17px;
+	color: #7a7a7a;
+}
+#header .nav_guide .min_nav{
+	float: right;
+	margin-right: 15px;
+}
+#header .nav_guide .min_nav ul li{
+	/*float: left;*/
+	display: inline-block;
+}
+#header .nav_guide .min_nav ul li a{
+	padding-right:10px ;
+	padding-left: 10px;
+	border-right: 1px solid #7a7a7a;
+	font-size: 14px;
+	color: #7A7A7A;
+}
+#header .nav_guide .min_nav ul li a:hover{
+	color: black;
+}
+#header .nav_guide .min_nav ul .download ul li a{
+	border: none;
+}
+#header .nav_guide .min_nav ul .download .border-right{
+	border-right: 1px solid #7a7a7a;
+}
+
+/*中间内容区域*/
+#maincontent{
+	width: 1240px;
+	margin: 0px auto;
+	overflow: hidden;  /*清除浮动的方法之一*/ 
+	/*border: 1px greenyellow dashed;*/
+	position: relative;
+}
+#maincontent .wrap{
+	width: 272px;
+	/*top: 0;
+	left: 0;
+	position: absolute;*/   /*使用定位不当会影响浮动的清除*/
+	float: left;
+}
+#maincontent .wrap ul{
+	border-left: 1px #E6E7E9 solid;
+	border-right: 1px #E6E7E9 solid;
+}
+#maincontent .wrap ul li{
+	padding-top: 15px;
+	padding-bottom: 8px;
+	border-bottom: 1px #E6E7E9 solid;
+}
+#maincontent .wrap ul li h3 a{
+	font-weight: 700;
+	color: #495672;
+}
+#maincontent .wrap ul li a{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #7A7A7A;
+	margin-left: 10px;
+}
+#maincontent .wrap ul li .wrap_left{
+	margin-left: 15px;
+}
+#maincontent .wrap ul li a:hover{
+	text-decoration: underline;
+	color: #365D93;
+}
+/*使用伪对象清除浮动*/
+.clearfix:after{   
+clear:both;
+display:block;
+height:0;
+content: "\200B";
+/*visibility:hidden;*/
+/*content:"."; */  /*当然，这在通过 CSS 在元素之后追加 "." 并不必要，因为还需要 visibility 来隐藏掉它。
+ 				通过优化：content:"020"; 其中，020 指在容器后添加空格，这样就避免使用 visibility 隐藏可视性了*/
+}
+.clearfix{ zoom:1; }
+
+/*以下是更加优化的方法
+.clearfix:before,.clearfix:after{
+	content: "";
+	display: table;
+}
+.clearfix:after{clear: both;}
+.clearfix{zoom: 1;}*/
+
+/*轮播图*/
+#maincontent .banner{
+	width: 965px;
+	float: left;
+	overflow: hidden;	
+	position: relative;
+	border: 1px #dcdcdc solid;
+	border-left: none;
+}
+#maincontent .banner .imgList {  /*图片尺寸965*413*/
+	width: 5890px;
+	height: 413px;
+	overflow: hidden;
+	position: relative;
+}
+/*#maincontent .banner .imgList li{
+	float: left;
+	display: inline;
+}*/
+
+.banner .imgList li a img{
+	opacity: 0.5;
+    filter: (opacity=50);
+	display:none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.banner .imgList li a img.cur{
+	opacity: 1;
+    filter: (opacity=100);
+	display: block;
+}
+#maincontent .banner .indexList{
+	position: absolute;
+	top: 386px;
+	left: 413px;
+}
+#maincontent .banner .indexList li{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #3e3e3e;
+	margin-left: 5px;
+	font-size: 12px;
+	font-family: arial;
+	color: white;
+	line-height: 20px;
+	text-align: center;
+	float: left;
+ 	cursor: pointer;
+}
+
+#maincontent .banner .indexList li.cur{
+	background: red;
+}
+
+#maincontent .banner .small_banner{
+	/*position: absolute;
+	left: 0;
+	bottom: 0;*/
+}		
+#maincontent .banner .small_banner li{
+	float: left;
+	/*border: 1px #dcdcdc solid;*/
+}
+#maincontent .banner .small_banner .bd{
+	border-right: 1px #dcdcdc solid;
+	/*border-left: none;
+	border-bottom: none;*/
+}
+#maincontent .banner .small_banner li a:hover{
+	/*filter:(opactity=70);*/
+	opacity: 0.7;
+}
+
+/*产品显示*/
+.product{
+	width: 1240px;
+	height: auto;
+	margin: 0px auto;
+}
+.product .product_title{
+	/*width: 100%;*/
+	height: 70px;
+	/*margin: auto 0px;*/
+	/*line-height: 71px;*/
+}
+.product .product_title img{
+	margin: 13px 7px;
+}
+.product .product_title span{
+	display: inline;
+	font-size: 18px;
+	font-weight: 500;
+	color: #413636;
+	position: relative;
+	top: -16px;
+	/*line-height: 71px;*/
+}
+
+.product .product_show{
+	width: 100%;
+	/*border: 1px palegreen solid;*/
+	overflow: hidden;
+	border: 1px #dcdcdc solid;
+}
+/*#product .product_show ul{
+	border: 1px #dcdcdc solid;
+}*/
+.product .product_show ul li{
+	padding: 15px 22px;
+	float: left;
+	border: 4px solid #FFFFFF;
+}
+.product .product_show ul li:hover{  /*这个是错误的，布局好之后改正*/
+	/*width: 90%;*/
+	/*width: 324px;*/   /*不能这样写。出现很多问题*/
+	/*height: 324px;*/
+	height: 90%;
+	border: 4px solid #E3E3E3;
+}
+/*畅销商品*/
+.product .product_sale{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	border: 1px #dcdcdc solid;
+}
+.product .product_sale ul li{
+	/*padding: 10px 10px;*/
+	float: left;
+	border: 4px solid #E3E3E3;
+}
+.product .product_sale ul li a img{
+	width: 300px;
+	height: 300px;
+}
+
+#footer{
+	width: 100%;
+	height: 500px;
+	margin-top: 50px;
+	background-color: #F7F6F6;
+}
+.footer_icon {
+	width: 1240px;
+	margin: 0px auto;
+	/*background-color: green;*/
+}
+.footer_icon ul{
+	padding-left: 40px;
+	overflow: hidden;
+	/*background: palegoldenrod;*/
+}
+.footer_icon ul li{
+	float: left;
+	padding: 20px 63px;
+	/*background: url(../img/footer-icon.png) no-repeat;*/
+}
+.footer_icon ul li a{
+	text-align: center;
+}
+.footer_icon ul li a p{
+	width: 44px;
+	height: 44px;
+	margin: 10px auto;
+	/*margin: 10px 0px;*/
+	background: url(../img/footer-icon.png) no-repeat;
+}
+
+.footer_icon ul li a .icon_1{
+	background-position: 0px -50px;
+}
+.footer_icon ul li a:hover .icon_1{
+	background-position: 0px 0px;
+}
+.footer_icon ul li a .icon_2{
+	background-position: -44px -50px;
+}
+.footer_icon ul li a:hover .icon_2{
+	background-position: -44px 0px ;
+}
+.footer_icon ul li a .icon_3{
+	background-position: -88px -50px;
+}
+.footer_icon ul li a:hover .icon_3{
+	background-position: -88px 0px ;
+}
+.footer_icon ul li a .icon_4{
+	background-position: -132px -50px;
+}
+.footer_icon ul li a:hover .icon_4{
+	background-position: -132px 0px ;
+}
+.footer_icon ul li a .icon_5{
+	/*box-shadow: 0 0 0 5px #000000;*/
+	background-position: -176px -50px;
+}
+.footer_icon ul li a:hover .icon_5{
+	background-position: -176px 0px ;
+}
+.footer_icon ul li a .icon_style{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: #666666;	
+}
+.footer_icon ul li a:hover .icon_style{
+color: #333333;	
+}
+
+.line{
+	width: 1240px; 
+	margin:20px auto; 
+	display: block;
+	border-top: 1px solid #F7F6F6;
+}
+.shop_guide{
+	width: 1240px;
+	/*border: 1px solid violet;*/
+	margin: 100px auto 10px;
+}
+.shop_guide ul{
+	float: left;
+	overflow: hidden;
+}
+.shop_guide ul li{
+	float: left;
+	padding-right: 70px;
+}
+.shop_guide ul li .first_line{
+	font-family: "微软雅黑";
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
+	line-height: 36px;
+}
+.shop_guide ul li p a{
+	font-size: 14px;
+	color: #666666;
+	line-height: 26px;
+}
+.shop_guide ul li p a:hover{
+	color: #333333;
+}
+
+.shop_guide .sina_weixin a{
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 3px;
+	background: #666666;
+}
+.shop_guide .sina_weixin a b{
+	width: 24px;
+	height: 24px;
+	display: block;
+	overflow: hidden;
+}
+.shop_guide .sina_weixin .sina b{
+	background: url(../img/H-bottom-icon.png)no-repeat 0 0;
+}
+.shop_guide .sina_weixin .sina b:hover{
+	background: url(../img/H-bottom-icon.png)no-repeat 0 -24px;
+}
+
+.shop_guide .sina_weixin .weixin b{
+	background: url(../img/H-bottom-icon.png)no-repeat -48px 0px;
+}
+
+.shop_guide .consult{
+	margin-top: 7px;
+	margin-left: 80px;
+	float: left;
+}
+.shop_guide .consult p{
+	font-size: 14px;
+	color: #666666;
+	line-height: 30px;
+}
+.shop_guide ul .consult p:hover{
+	color: #333333;
+}
+.shop_guide .consult .online_server{
+	line-height: 46px;
+	text-align: center;
+	background: url(../img/ico-05_850174a.gif) no-repeat;
+}
+.shop_guide .consult .online_server a{
+	font-size: 20px;
+	color: white;
+}
+
+/*版权说明*/
+.copyright{
+	width: 1240px;
+	margin: 15px auto;
+	/*float: left;*/
+}
+.copyright ul{
+	margin-left: 386px;
+	overflow: hidden;
+}
+.copyright ul li{
+	padding-top: 14px;
+	float: left;
+}
+.copyright ul li a{
+	padding-left: 10px;
+	padding-right: 10px;
+	border-right: 1px solid #7a7a7a;
+	font-size: 14px;
+	color: #7a7a7a;
+}
+.copyright ul li a:hover{
+	color: #000000;
+}
+.copy{
+	width: 1240px;
+	margin: 5px auto;
+}
+.copy p{
+	/*line-height: 36px;*/
+	font-family: "微软雅黑";
+	font-size: 14px;
+	text-align: center;
+	color: #7a7a7a;
+	margin-bottom: 50px;
+}
+
+

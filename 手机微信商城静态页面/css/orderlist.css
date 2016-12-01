@@ -1,0 +1,40 @@
+body {
+    background-color: #ffffff;
+}
+
+.order-container .refresh {
+    top: 18px;
+}
+
+.order-list {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+    .order-list table {
+        width: 100%;
+    }
+
+th, td {
+    text-align: center;
+    
+}
+
+td{
+    padding: 10px 0px;
+}
+
+.order-list tr {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.order-list a {
+        display: block;
+        background-color: #f73f00;
+        color: #ffffff;
+        width: 40px;
+        padding:3px;
+        margin:0px auto;
+        border-radius:3px;
+    }

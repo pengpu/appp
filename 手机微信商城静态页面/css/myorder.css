@@ -1,0 +1,59 @@
+body {
+    background-color: #ffffff;
+}
+
+.order-container .refresh {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../images/icon_refresh.png);
+    background-size: cover;
+    width:16px;
+    height:16px;
+}
+
+.pro-list {
+    padding: 20px;
+}
+
+.pro-info {
+    line-height: 30px;
+    color: #000000;
+    font-size: 16px;
+    position: relative;
+}
+
+.pro-list .separator {
+    border-top: 1px solid #d4d4d4;
+    width: 100%;
+    clear: both;
+}
+
+.pro-info span:last-child {
+    position: absolute;
+    right: 0px;
+}
+
+.pro-footer {
+    padding: 5px 0px;
+}
+
+    .pro-footer div {
+        line-height: 24px;
+        color: #fb4880;
+        font-size: 16px;
+    }
+
+.clear {
+    clear: both;
+}
+
+.pro-order {
+    padding: 5px 0px;
+    width: 100%;
+}
+
+    .pro-order div {
+        line-height: 30px;
+        font-size: 14px;
+        color: #000000;
+    }

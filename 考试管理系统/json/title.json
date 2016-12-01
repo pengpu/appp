@@ -1,0 +1,16 @@
+[{"id":"0",
+  "name":"radio",
+  "realName":"全部"
+ },
+{"id":"1",
+  "name":"radio",
+  "realName":"单选题"
+  },
+  {"id":"2",
+   "name":"check",
+   "realName":"多选题"
+  },
+  {"id":"3",
+   "name":"chaper",
+   "realName":"简答题"
+ }]

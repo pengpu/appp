@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index_qiku.js" type="text/javascript" charset="utf-8"></script>
+<!--		<script type="text/javascript">
+			$(function(){
+//				1.全局变量
+				var curIndex=0;  //当前index
+				imgLen = $(".img_list li").length;  //图片总数
+//				2.自动切换的定时器处理,设置2.5秒变换一次
+				var autoChange = setInterval(function(){
+					if(curIndex < imgLen-1){
+						curIndex　++;
+					}
+					else{
+						curIndex = 0;
+					}
+					//调用变换处理函数
+					changeTo(curIndex);
+				},2500);
+//				3.中间那6个li按钮绑定事件处理
+				$(".index_list li a").find("img").each(function(item){
+					$(this).hover(function(){
+						clearInterval(autoChange);
+						changeTo(item);
+						curIndex = item;
+					},function(){
+						autoChangeAgain();
+					});
+				});
+				
+				//清除定时器时候的重置定时器封装
+				function autoChangeAgain(){ 
+				    autoChange = setInterval(function(){ 
+				    if(curIndex < imgLen-1){ 
+				        curIndex ++;
+				    }else{ 
+				        curIndex = 0;
+				    }
+				    //调用变换处理函数
+				    changeTo(curIndex); 
+				    },2500);
+				}
+				
+				function changeTo(num){  //图片切换的处理函数
+					var toLeft = num * 965;  //每传入一个图片序号，则按理进行toLeft
+					$(".img_list").animate({
+						left: "-" + toLeft   + "px";
+					},500);
+					$(".index_list").eq(num).addClass("onselect").siblings("li").removeClass("onselect");
+				}
+								
+			});
+		</script>-->
+		<!--<script type="text/javascript">
+			$(function(){
+				$(".product_show ul li").hover(function(){
+					$(this).animate({
+						width: "90%";
+						height: "90%";
+						border: 4px pink solid;
+					},1000);
+				});
+			});
+		</script>-->
+		<title>奇酷首页</title>
+	</head>
+	<body>
+		<!--头部区域-->
+		<div id="header">
+			<div class="header_top">
+				<div class="qiku_name">
+					<span >
+						360奇酷商城
+					</span>
+				</div>		
+				<!--导航-->
+				<div class="nav">
+					<ul>
+						<li><a href="#">首页</a></li>
+						<li><a href="#">360手机</a></li>
+						<li><a href="#">High购季</a></li>
+						<li><a href="#">Q码通道</a></li>
+						<li><a href="#">360 &nbsp; OS</a></li>
+						<li><a href="#">社区</a></li>
+						<li><a href="#">服务</a></li>
+						<li>
+							<input type="search" class="input_1" placeholder="请输入关键字搜索" />
+							<input type="text" class="input_2" value="购物车（0）" />
+						</li>
+					</ul>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			
+			<div class="nav_guide">
+				<div class="sort">
+					<span>全部商品分类</span>					
+				</div>
+				
+				<div class="min_nav">
+					<ul >
+						<li><a href="">网站导航</a></li>						
+						<li class="download">
+							<ul>
+								<li><a href="">商城APK下载</a></li>
+								<li><a href="">商城wap版</a></li>
+								<li><a href="">官方微信</a></li>
+								<li><a class="border-right" href="">360 &nbsp; OS云服务</a></li>
+							</ul>
+						</li>
+						<li><a href="">大学生分期</a></li>
+						<li><a href="">随心保</a></li>
+						<li><a href="">我的订单</a></li>
+						<li class="download">
+							<ul>
+								<li><a href="">登录</a></li>
+								<li><a href="">注册</a></li>
+								<li><a class="border-right" href="">忘记密码？</a></li>
+							</ul>
+						</li>
+						<li><a href="">免注册订单查询</a></li>
+					</ul>
+				</div>
+				<div style="clear: both;"></div>
+			</div>		
+		</div>
+	
+		<!--中间内容区域-->
+		<div id="maincontent">	
+			<div class="wrap">
+				<ul>
+					<li>
+						<h3 ><a class="wrap_left" href="">360手机</a></h3>	
+						<a class="wrap_left" href="">极客版</a>
+						<a href="">旗舰版</a>
+						<a href="">青春版</a>
+						<a href="">f4系列</a>
+					</li>
+					<li>
+						<h3><a class="wrap_left" href="">大神手机</a></h3>
+						<a class="wrap_left" href="">大神Note3</a>
+						<a href="">大神X7</a>
+						<a href="">大神F2</a>
+						<a href="">合约机</a>
+					</li>
+					<li>
+						<h3><a class="wrap_left" href="">360智能硬件</a></h3>
+						<a class="wrap_left" href="">儿童手表</a>
+						<a href="">行车记录仪</a>
+						<a href="">安全路由</a>
+					</li>
+					<li>
+						<h3><a class="wrap_left" href="">保护类</a></h3>
+						<a class="wrap_left" href="">皮套</a>
+						<a href="">保护膜</a>
+						<a href="">后壳</a>	
+					</li>
+					<li>
+						<h3><a class="wrap_left" href="">能源类</a></h3>
+						<a class="wrap_left" href="">移动电源</a>
+						<a href="">适配器</a>
+						<a href="">线材</a>
+						<a href="">电池</a>
+					</li>
+					<li>
+						<h3><a class="wrap_left" href="">耳机与音箱</a></h3>
+						<a class="wrap_left" href="">线控耳机</a>
+						<a href="">蓝牙耳机</a>
+					</li>
+					<li>
+						<h3><a class="wrap_left" href="">奇酷特色</a></h3>
+						<a class="wrap_left" href="">大学生分期购</a>
+						<a class="wrap_left" href="">以旧换新</a>
+					</li>
+					<li>
+						<h3><a class="wrap_left" href="">个性化配件</a></h3>
+						<a class="wrap_left" href="">数码配件</a>
+						<a href="">创意配件</a>
+						<a href="">智能硬件</a>
+					</li>
+				</ul>
+			</div>
+			<!--以下2种方法均能够清除浮动，前提是不能够使用定位-->
+			<!--<div style="clear: both;"></div>-->			
+			<!--<div class="clearfix"></div>-->
+			
+					<!--右边区域,广告轮播图-->
+			<div class="banner">
+				<ul class="imgList"> <!--轮播的图片-->
+					<li><a href=""><img class="cur" src="img/首页/banner-1.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/banner-2.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/banner-3.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/banner-4.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/banner-5.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/banner-6.png" alt="" /></a></li>	
+				</ul>
+				<ul class="indexList">  <!--数字序号-->
+					<li class="cur">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+				</ul>
+				<!--轮播图下面的banner-->
+				<ul class="small_banner">
+					<li class="bd"><a href=""><img src="img/首页/small-banner1.png" alt="" /></a></li>
+					<li class="bd"><a href=""><img src="img/首页/small-banner2.png" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/small-banner3.png" alt="" /></a></li>
+				</ul>
+			</div>	<!--banner广告布局结束-->						
+		</div>	<!--maincontent布局结束-->
+		
+		<!--产品展示区域-->
+		<div class="product">
+			<div class="product_title">
+				<img src="img/首页/monkey.png"/>
+				<span>新品推荐</span>
+			</div>
+			<div class="product_show">
+				<ul>
+					<li><a href=""><img src="img/首页/产品显示图/xinpin-1.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/产品显示图/xinpin-2.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/产品显示图/xinpin-3.jpg" alt="" /></a></li>
+				</ul>	
+				<!--<a href=""><img src="img/首页/产品显示图/xinpin-1.jpg" alt="" /></a>
+				<a href=""><img src="img/首页/产品显示图/xinpin-2.jpg" alt="" /></a>
+				<a href=""><img src="img/首页/产品显示图/xinpin-3.jpg" alt="" /></a>-->
+			</div>
+			
+			<div class="product_title">
+				<img src="img/首页/monkey.png"/>
+				<span>精美配件</span>
+			</div>			
+			<div class="product_sale">
+				<ul>
+					<li><a href=""><img src="img/首页/产品显示图/changxiao-1.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/产品显示图/changxiao-2.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/产品显示图/changxiao-3.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/产品显示图/changxiao-4.jpg" alt="" /></a></li>
+				</ul>	
+			</div>
+			
+			<div class="product_title">
+				<img src="img/首页/monkey.png"/>
+				<span>畅销商品</span>
+			</div>
+			<div class="product_show">
+				<ul>
+					<li><a href=""><img src="img/首页/产品显示图/xinpin-1.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/产品显示图/xinpin-2.jpg" alt="" /></a></li>
+					<li><a href=""><img src="img/首页/产品显示图/xinpin-3.jpg" alt="" /></a></li>
+				</ul>	
+			</div>
+		</div>
+		
+		<!--页面底部-->
+		<div id="footer">
+			<div class="footer_icon">
+				<ul>
+					<li>
+						<a href="">
+							<p class="icon_1"></p>
+							<span class="icon_style">7天保障退货</span>						
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<p class="icon_2"></p>
+							<span class="icon_style">15天换货保障</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<p class="icon_3"></p>
+							<span class="icon_style">100元起免邮费</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<p class="icon_4"></p>
+							<span class="icon_style">620余家售后网点</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+						<p class="icon_5"></p>
+							<span class="icon_style">寄修服务</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<hr class="line" />
+			
+			<div class="shop_guide">
+				<ul>
+					<li>
+						<p class="first_line">购物指南</p>
+						<p><a href="">购物流程</a></p>
+						<p><a href="">优惠券</a></p>
+						<p><a href="">常见问题</a></p>
+					</li>
+					<li>
+						<p class="first_line">关于支付</p>
+						<p><a href="">支付方式</a></p>
+						<p><a href="">关于发票</a></p>
+					</li>
+					<li>
+						<p class="first_line">配送服务</p>
+						<p><a href="">配送方式</a></p>
+						<p><a href="">签收说明</a></p>
+					</li>
+					<li>
+						<p class="first_line">售后服务</p>
+						<p><a href="">售后政策</a></p>
+						<p><a href="">寄修服务</a></p>
+						<p><a href="">特色服务</a></p>
+					</li>
+					<li>
+						<p class="first_line">关注我们</p>
+						<p><a href="">客服微博</a></p>
+						<p><a href="">关注我们</a></p>
+						<p class="sina_weixin">
+							<a class="sina" href=""><b></b></a>
+							<a class="weixin" href=""><b></b></a>
+						</p>
+					</li>								
+				</ul>
+				<hr style="height: 176px; border-left: 1px solid #F7F6F6; float:left; margin-left: 110px; display: inline-block;" />
+				<div class="consult">
+					<p>商城购物咨询：400-011-1366（仅收市话费）</p>
+					<p>售后服务热线：400-011-1388</p>
+					<p>周一至周日：09:00-21:00</p>
+					<p>顺丰热线：95338</p>
+					<p>宅急送热线：400-677-9000</p>
+					<!--<p>导购在线</p>-->
+					<!--<p></p>-->
+					<p class="online_server">
+						<a href="">导购在线</a>
+					</p>
+				</div>
+				<div class="clearfix"></div>				
+			</div>
+			<hr class="line" />			
+			<div class="copyright">
+				<ul>
+					<li><a href="">首页</a></li>
+					<li><a href="">360 &nbsp;OS云服务</a></li>
+					<li><a href="">服务支持</a></li>
+					<li><a href="">360手机社区</a></li>
+					<li><a  style="border: none;" href="">联系我们</a></li>					
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+			<div class="copy">
+				<p>法律声明|备案证号：京ICP备11014623号-6    &copy; 版权2012-2020 奇酷互联网络科技(深圳)有限公司</p>
+			</div>
+		</div>
+	</body>
+</html>
